@@ -1,0 +1,5 @@
+FROM alpine:3.14
+COPY hello_wilder.sh /
+RUN chmod +x /hello_wilder.sh && \
+    apk --no-cache add hostname
+CMD ["/hello_wilder.sh"]
